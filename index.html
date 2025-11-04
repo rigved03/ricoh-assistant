@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Ricoh Applicant Assistant</title>
+    
+    <style>
+        
+        :root { 
+            --primary-color: #DA291C; 
+            --secondary-color: #333333; 
+            --bg-color: #ffffff;
+            --text-color: #333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        body h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--primary-color); 
+        }
+       
+        body p {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--secondary-color); 
+        }
+        
+        body p:nth-of-type(2) {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .btn-tagline {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            background: var(--primary-color); 
+            color: #fff;
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        .btn-tagline:hover {
+            background: #b02115; 
+            border-color: #b02115;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content-wrapper"> 
+        <h2>Ricoh Applicant Assistant</h2>
+        <p class="subtitle">Applicant Filtering for Job IDs 5206 & 5292</p>
+        <p class="tagline-cta">Smart Sieving. Faster Hiring.</p>
+        <a href="#" class="btn-tagline">Start Filtering</a>
+    </div>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "bad421a2-099c-447f-8d2f-41be5e9c6f21", 
+        region: "us-south", 
+        serviceInstanceID: "e428888d-5214-4964-888d-78d13d3cd291",
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+
+</body> 
+</html>
